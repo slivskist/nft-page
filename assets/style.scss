@@ -1,0 +1,29 @@
+// Base styles
+@import "./base/reset";
+@import "./base/variables";
+
+// Mixins
+@import './mixins/media';
+
+// Atoms
+@import "./atoms/headings";
+@import "./atoms/link";
+@import "./atoms/btn";
+@import "./atoms/paragraph";
+
+// Molecules
+@import "./molecules/header";
+@import "./molecules/main";
+@import "./molecules/footer";
+
+:root {
+
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    font-family: $font-main;
+    background-color: $light-1;
+    color: $dark-2;
+}
