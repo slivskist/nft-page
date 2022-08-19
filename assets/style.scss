@@ -26,4 +26,6 @@ body {
     font-family: $font-main;
     background-color: $light-1;
     color: $dark-2;
+    max-width: 100%;
+    overflow-x: hidden;
 }

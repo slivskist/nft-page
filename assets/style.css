@@ -84,6 +84,34 @@ h3 {
           text-decoration-line: underline;
 }
 
+.btn {
+  display: inline-block;
+  width: 19rem;
+  height: 7.5rem;
+  background: #FF3939;
+  background: linear-gradient(21deg, #FF3939 34%, #FF3998 51%, #FF8139 83%, #39FFA0 100%);
+  position: relative;
+  margin-top: 3.2rem;
+  border-radius: 10rem;
+}
+
+.btn--link {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  height: 6.7rem;
+  width: 18.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #111111;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: center;
+  padding: 2.2rem 5.6rem;
+  background-color: #FFFFFF;
+  border-radius: 10rem;
+}
+
 p {
   font-weight: 400;
   font-size: 20px;
@@ -167,11 +195,12 @@ p {
 .header__menu--links {
   position: absolute;
   width: 100vw;
+  height: 100vh;
   margin: -10rem 0 0 -86vw;
   padding: 5rem;
   padding-top: 12.5rem;
   background: #FFFFFF;
-  opacity: 0.8;
+  opacity: 0.9;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -185,6 +214,25 @@ p {
   text-align: center;
 }
 
+.main {
+  padding: 3.2rem;
+}
+
+.hero {
+  width: 75%;
+}
+.hero--heading, .hero--copy {
+  margin-top: 2.4rem;
+}
+.hero--graphic {
+  height: 42rem;
+  width: auto;
+  position: absolute;
+  top: 4rem;
+  left: 21rem;
+  z-index: -1;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -194,4 +242,6 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #FFFFFF;
   color: #555555;
+  max-width: 100%;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
