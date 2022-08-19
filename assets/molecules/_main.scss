@@ -1,9 +1,10 @@
 .main {
-    padding: 3.2rem;
 }
 
 .hero {
+    padding: 3.2rem;
     width: 75%;
+    padding-bottom: 8rem;
 
     &--heading {
         margin-top: 2.4rem;
@@ -21,4 +22,30 @@
         left: 21rem;
         z-index: -1;
     }
+}
+
+.upsell {
+
+    position: relative;
+
+    &--heading {
+        margin-bottom: 1.6rem;
+        padding: 12.2rem 3.2rem 0 3.2rem;
+    }
+
+    &--copy {
+        padding: 0 3.2rem 3.2rem 3.2rem;
+        color: $dark-1;
+    }
+
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        background: linear-gradient(78deg, $pink -10%, $red 30%, $orange 85%, $green 110%);
+        filter: opacity(0.9) contrast(0.8) saturate(1.1);
+    }
+
 }
