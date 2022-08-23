@@ -216,13 +216,13 @@ p {
 
 .hero {
   padding: 3.2rem;
-  width: 75%;
+  width: 79%;
   padding-bottom: 8rem;
 }
-.hero--heading, .hero--copy {
+.hero--heading, .footer__upsell--heading, .hero--copy, .footer__upsell--copy {
   margin-top: 2.4rem;
 }
-.hero--graphic {
+.hero--graphic, .footer__upsell--graphic {
   height: 42rem;
   width: auto;
   position: absolute;
@@ -283,6 +283,109 @@ p {
   display: none;
 }
 
+.showcase {
+  padding: 3.2rem;
+  padding-top: 2.4rem;
+  width: 100%;
+}
+.showcase--heading {
+  margin-bottom: 1.6rem;
+}
+.showcase--copy {
+  margin-bottom: 4rem;
+}
+.showcase__carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.showcase__carousel--card {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #EEEEEE;
+  border-radius: 1.6rem;
+  align-items: center;
+  margin-right: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 0 0 auto;
+}
+.showcase__carousel--card:last-child {
+  margin: 0;
+}
+.showcase__carousel--cardimage {
+  grid-column: 1/-1;
+}
+.showcase__carousel--cardseries, .showcase__carousel--cardbid, .showcase__carousel--cardexpiry, .showcase__carousel--cardprice {
+  color: #FF8139;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  grid-column: 2/7;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+.showcase__carousel--cardbid, .showcase__carousel--cardexpiry, .showcase__carousel--cardprice {
+  color: #777777;
+  grid-column: 7/-2;
+  text-align: right;
+}
+.showcase__carousel--cardname {
+  grid-column: 2/7;
+  color: #111111;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+.showcase__carousel--cardprice {
+  color: #111111;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+.showcase__carousel--cardprice::before {
+  content: url(./images/eth.svg);
+  height: 2.2rem;
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.1rem;
+}
+.showcase__carousel--cardnumber {
+  grid-column: 2/7;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: #777777;
+}
+.showcase__carousel--cardexpiry {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.footer__upsell {
+  position: relative;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+  border-top: 2px solid #EEEEEE;
+  border-bottom: 2px solid #EEEEEE;
+}
+.footer__upsell--heading {
+  width: 70%;
+}
+.footer__upsell--copy {
+  width: 56%;
+}
+.footer__upsell--graphic {
+  height: 45rem;
+  top: 12rem;
+  left: 25.4rem;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -292,6 +395,6 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #FFFFFF;
   color: #555555;
-  max-width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
