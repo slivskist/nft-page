@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, .footer__nav--link, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -77,6 +77,22 @@ h3 {
   color: #FF3998;
 }
 
+h4 {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #555555;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.9rem;
+  color: #555555;
+  margin-bottom: 2.8rem;
+}
+
 .link {
   color: inherit;
   font-weight: 500;
@@ -112,7 +128,7 @@ h3 {
   border-radius: 10rem;
 }
 
-p {
+p, .footer__nav--link {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
@@ -214,6 +230,10 @@ p {
   text-align: center;
 }
 
+.main {
+  max-width: 100vw;
+}
+
 .hero {
   padding: 3.2rem;
   width: 79%;
@@ -227,7 +247,7 @@ p {
   width: auto;
   position: absolute;
   top: 4rem;
-  left: 21rem;
+  right: -23rem;
   z-index: -1;
 }
 
@@ -286,13 +306,16 @@ p {
 .showcase {
   padding: 3.2rem;
   padding-top: 2.4rem;
+  padding-right: 0;
   width: 100%;
 }
 .showcase--heading {
   margin-bottom: 1.6rem;
+  padding-right: 3.2rem;
 }
 .showcase--copy {
   margin-bottom: 4rem;
+  padding-right: 3.2rem;
 }
 .showcase__carousel {
   display: flex;
@@ -370,7 +393,7 @@ p {
 .footer__upsell {
   position: relative;
   padding: 3.2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 6.5rem;
   border-top: 2px solid #EEEEEE;
   border-bottom: 2px solid #EEEEEE;
 }
@@ -384,6 +407,60 @@ p {
   height: 45rem;
   top: 12rem;
   left: 25.4rem;
+}
+
+.footer {
+  display: grid;
+  padding: 6.4rem 3.2rem;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+.footer__brand {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6.4rem;
+}
+.footer__brand--heading {
+  margin: 3rem 0;
+}
+.footer__brand--socials {
+  color: #999999;
+}
+.footer__nav {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.footer__nav--col {
+  grid-column: span 6;
+  margin-bottom: 4rem;
+}
+.footer__nav--links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__nav--link {
+  text-decoration: none;
+}
+.footer__copyright {
+  grid-column: 1/-1;
+  margin: 3.2rem 0;
+  color: #999999;
+}
+
+.hide {
+  display: none;
+}
+
+.fa-brands {
+  margin-right: 1.6rem;
+}
+
+.fa-brands:last-child {
+  margin: 0;
 }
 
 :root {

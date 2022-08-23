@@ -1,4 +1,5 @@
 .main {
+    max-width: 100vw;
 }
 
 .hero {
@@ -19,7 +20,7 @@
         width: auto;
         position: absolute;
         top: 4rem;
-        left: 21rem;
+        right: -23rem;
         z-index: -1;
     }
 }
@@ -86,14 +87,17 @@
 .showcase {
     padding: 3.2rem;
     padding-top: 2.4rem;
+    padding-right: 0;
     width: 100%;
 
     &--heading {
         margin-bottom: 1.6rem;
+        padding-right: 3.2rem;
     }
 
     &--copy {
         margin-bottom: 4rem;
+        padding-right: 3.2rem;
     }
 
     &__carousel {
@@ -185,7 +189,7 @@
 .footer__upsell {
     position: relative;
     padding: 3.2rem;
-    padding-bottom: 6rem;
+    padding-bottom: 6.5rem;
     border-top: 2px solid $light-2;
     border-bottom: 2px solid $light-2;
 
