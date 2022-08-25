@@ -243,11 +243,12 @@ p, .footer__nav--link {
   margin-top: 2.4rem;
 }
 .hero--graphic, .footer__upsell--graphic {
-  height: 42rem;
-  width: auto;
+  width: 100%;
+  height: auto;
+  max-height: inherit;
   position: absolute;
   top: 4rem;
-  right: -23rem;
+  right: -22rem;
   z-index: -1;
 }
 
@@ -281,6 +282,7 @@ p, .footer__nav--link {
   grid-template-rows: 1fr 1fr;
   gap: 2.8rem 3rem;
   max-width: 100%;
+  background-color: #FFFFFF;
   /*     &__company--boomerang {
           width: 80%;
           height: 100%;
@@ -290,7 +292,6 @@ p, .footer__nav--link {
 }
 .press__company {
   grid-column: span 6;
-  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -393,7 +394,6 @@ p, .footer__nav--link {
 .footer__upsell {
   position: relative;
   padding: 3.2rem;
-  padding-bottom: 6.5rem;
   border-top: 2px solid #EEEEEE;
   border-bottom: 2px solid #EEEEEE;
 }
@@ -405,8 +405,13 @@ p, .footer__nav--link {
 }
 .footer__upsell--graphic {
   height: 45rem;
-  top: 12rem;
-  left: 25.4rem;
+  top: unset;
+  bottom: 0;
+  left: 16rem;
+  right: unset;
+}
+.footer__upsell--btn {
+  margin-bottom: 3.2rem;
 }
 
 .footer {
