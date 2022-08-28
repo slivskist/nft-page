@@ -2,4 +2,9 @@
     color: inherit;
     font-weight: 500;
     text-decoration-line: underline;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: $pink;
 }

@@ -228,6 +228,11 @@
         margin-right: 4rem;
         object-fit: cover;
         flex: 0 0 auto;
+        transition: background-color 0.5s ease;
+    }
+
+    &__carousel--card:hover {
+        background-color: $light-3;
     }
 
     &__carousel--card:last-child {

@@ -57,10 +57,15 @@
         &--link {
             text-decoration: none;
             @extend p;
+            transition: color 0.3s ease;
 
             @include sm {
                 line-height: 4rem;
             }
+        }
+
+        &--link:hover {
+            color: $pink;  
         }
     }
 
@@ -87,9 +92,14 @@
 }
 
 .fa-brands {
-    margin-right: 1.6rem;    
+    margin-right: 1.6rem;
+    transition: color 0.3s ease;    
 }
 
 .fa-brands:last-child {
     margin: 0;
+}
+
+.fa-brands:hover {
+    color: $pink;
 }
