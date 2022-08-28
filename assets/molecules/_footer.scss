@@ -4,6 +4,10 @@
     grid-template-columns: repeat(12, 1fr);
     width: 100%;
 
+    @include sm {
+        padding: 12rem 8rem;
+    }
+
     &__brand {
         grid-column: 1 / -1;
         display: flex;
@@ -11,8 +15,9 @@
         align-items: flex-start;
         margin-bottom: 6.4rem;
 
-        &--logo {
-
+        @include sm {
+            grid-column: 1 / 4;
+            margin: 0;
         }
 
         &--heading {
@@ -29,9 +34,18 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
 
+        @include sm {
+            grid-column: 7 / -1;
+            justify-items: center;
+        }
+
         &--col {
             grid-column: span 6;
             margin-bottom: 4rem;
+
+            @include sm {
+                grid-column: span 3;
+            }
         }
 
         &--links {
@@ -43,6 +57,10 @@
         &--link {
             text-decoration: none;
             @extend p;
+
+            @include sm {
+                line-height: 4rem;
+            }
         }
     }
 
@@ -50,12 +68,22 @@
         grid-column: 1 / -1;
         margin: 3.2rem 0;
         color: $dark-4;
+
+        @include sm {
+            grid-column: span 6;
+            justify-self: start;
+        }
     }
 
 }
 
-.hide {
+.copyright--hide {
     display: none;
+
+    @include sm {
+        display: inline-block;
+        justify-self: end;
+    }
 }
 
 .fa-brands {

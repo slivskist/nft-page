@@ -29,6 +29,7 @@ body {
     overflow-x: hidden;
 
     @include sm {
-        max-width: 128rem;
+        max-width: (128rem + 16rem);
+        margin: 0 auto;
     }
 }

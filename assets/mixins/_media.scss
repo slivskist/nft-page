@@ -3,3 +3,11 @@
         @content
     }
 }
+
+.desktop {
+    display: none;
+
+    @include sm {
+        display: inline;
+    }
+}
