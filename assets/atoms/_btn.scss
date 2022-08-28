@@ -1,0 +1,33 @@
+.btn {
+    display: inline-block;
+    width: 19rem;
+    height: 7.5rem;
+    background: $red;
+    background: linear-gradient(21deg, $red 34%, $pink 51%, $orange 83%, $green 100%);      
+    position: relative;
+    margin-top: 3.2rem;
+    border-radius: 10rem;
+}
+
+.btn--link {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    height: (7.5rem - 0.8rem);
+    width: (19rem - 0.8rem);
+    text-decoration: none;
+    white-space: nowrap;
+    color: $dark-1;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    padding: 2.2rem 5.6rem;
+    background-color: $light-1;
+    border-radius: 10rem;
+    transition: all 0.3s ease;
+}
+
+.btn--link:hover {
+    color: $light-1;
+    background-color: #ffffff35;
+}

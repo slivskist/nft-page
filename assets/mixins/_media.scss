@@ -1,0 +1,13 @@
+@mixin sm {
+    @media (min-width: 670px) {
+        @content
+    }
+}
+
+.desktop {
+    display: none;
+
+    @include sm {
+        display: inline;
+    }
+}

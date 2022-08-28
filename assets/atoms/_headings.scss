@@ -3,6 +3,11 @@ h1 {
     font-weight: 900;
     color: $dark-1;
     line-height: 5.8rem;
+
+    @include sm {
+        font-size: 9.6rem;
+        line-height: 11.6rem;
+    }
 }
 
 h2 {
@@ -14,9 +19,25 @@ h2 {
 
 h3 {
     font-weight: 700;
-    font-size: 1.6re,;
+    font-size: 1.6rem;
     line-height: 1.9rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $pink;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: $dark-2;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.9rem;
+    color: $dark-2;
+    margin-bottom: 2.8rem;
 }

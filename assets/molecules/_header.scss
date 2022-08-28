@@ -1,0 +1,156 @@
+.header {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+
+    @include sm {
+        padding: 7rem 8rem;
+    }
+
+    &__logo {
+        height: 3.6rem;
+        width: auto;
+    }
+
+    &__menu--toggle {
+        display: block;
+        position: relative;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        user-select: none;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__menu--link {
+        text-decoration: none;
+        color: $dark-1;
+        
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $pink;
+        }
+    }
+
+    &__menu--checkbox {
+        display: block;
+        width: 3rem;
+        height: 3.2rem;
+        position: absolute;
+        top: -0.7rem;
+        left: -0.5rem;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+        
+        -webkit-touch-callout: none;
+
+        &:checked ~ span
+        {
+          opacity: 1;
+          transform: rotate(45deg) translate(0.4rem, 0.4rem);
+          background: $dark-1;
+        }
+
+        &:checked ~ span:nth-last-child(3)
+        {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        &:checked ~ span:nth-last-child(2)
+        {
+          transform: rotate(-45deg) translate(0, 0.1rem);
+        }
+
+        &:checked ~ ul
+        {
+          transform: none;
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__menu--span {
+        display: block;
+        width: 2.4rem;
+        height: 0.4rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        
+        background: $dark-4;
+        border-radius: 0.3rem;
+        
+        z-index: 1;
+        
+        transform-origin: 0.4rem 0;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+
+        &:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        &:nth-last-child(2)
+        {
+            transform-origin: 0% 100%;
+        }
+
+        @include sm {
+            display: none;
+        }
+
+    }
+
+    &__menu--mobilelinks {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: -10rem 0 0 -86vw;
+        padding: 5rem;
+        padding-top: 12.5rem;
+        
+        background: $light-1;
+        opacity: 0.9;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(0, -100%);
+        
+        transition: transform 0.7s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    &__menu--desktoplinks {
+        display: none;
+
+        @include sm {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__menu--link {
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.highlight {
+    color: $pink;
+}
